@@ -89,7 +89,9 @@ body {
     margin: auto;
 }
 
-
+.main-footer i{
+    font-size: 2em;
+}
 
 @media (min-width: 768px) {
     .main-header-top-bar {
