@@ -2,20 +2,30 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-amarillo: #EAC926;
+    --color-azul: #03264C;
+    --color-celeste: #1259c3;
+    --color-gris-oscuro: #666;
+    --color-gris-claro: #ebebeb;
+    --color-verde: #39b54a;
+    --color-blanco: #fff; 
+    --color-negro: #222;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #ebebeb;
-    
+    background-color: var(--color-gris-claro);
 }
 
 .main-header {
-    background-color: #EAC626;
-    padding: 20px;;
+    background-color: var(--color-amarillo);
+    padding: 20px;
 }
 
-.hamburguer-buttom{
-    background-color: #03264C;
-    color: #ffff;
+.burguer-menu {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
     display: block;
     max-width: 40px;
     padding: 10px 0;
@@ -46,39 +56,59 @@ body {
 
 .main-navbar a {
     text-decoration: none;
-    color: #222;
+    color: var(--color-negro);
     display: inline-block;
     padding: 5px 0;
     font-size: 17px;
 }
 
 .banner {
-    background-color: #ebebeb;
+    background-color: var(--color-gris-claro);
     background-position: center;
 }
 
 .main-section {
     display: block;
+    width: 90%;
+    margin: 0 auto;
     background-position: center;
-    text-align: center;
-    font-size: 18px;
+    text-align: left;
+    font-size: 16px;
     margin: auto;
+    margin-bottom: 10px;
 }
 
-.h2 {
-    font-size: 24px;
+.productos, .ofertas {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-oscuro); /* Agrega el borde superior con color #ebebeb */
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    
 }
+
+.productos img {
+    border: 1px solid #ebebeb; /* Agrega un borde alrededor del contenedor de producto */
+    padding: 10px
+}
+
+.ofertas img {
+    border: 1px solid #ebebeb; /* Agrega un borde alrededor del contenedor de producto */
+    padding: 10px
+}
+
 
 .precios {
     font-size: 18px;
-} 
-.descuentos {
-    font-size: 16px;
 }
-.descripciones {
-    font-size: 16px;
+
+h2 {
+    font-size: 24px;
 }
-    
+
+.precios, .descuentos, .descripcion {
+    margin: 10px 0;
+}
 
 .main-footer {
     display: block;
@@ -89,22 +119,35 @@ body {
     margin: auto;
 }
 
-.main-footer i{
+.main-footer p{
+    font-size: 12px;
+}
+
+.main-footer i {
     font-size: 2em;
+    margin-top: 10px;
+}
+
+.main-pie-pagina-final {
+    font-size: 12px; 
+    text-align: left;
 }
 
 @media (min-width: 768px) {
+    .body{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
     .main-header-top-bar {
         display: flex;
         justify-content: space-between;
     }
     
     .copy-header {
-        max-width: 350px;
+        max-width: 100%;
         text-align: right;
     }
 
-    .hamburguer-buttom {
+    .burguer-menu {
         display: none;
     }
 
@@ -123,7 +166,7 @@ body {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .logo {
         width: 250px;
     }
